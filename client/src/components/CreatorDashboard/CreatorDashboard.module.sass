@@ -1,0 +1,63 @@
+$break-point: 900px
+$main-color: #556da5
+
+.mainContainer
+  max-width: 1200px
+  width: 100%
+  margin: 0 auto
+  margin-top: 50px
+  display: flex
+  flex-direction: row
+  justify-content: flex-start
+  @media(max-width: $break-point)
+    margin-top: 10px
+    flex-direction: column
+
+  .messageContainer
+    margin-top: 20px
+    display: flex
+    justify-content: center
+    align-items: flex-start
+    flex: 1
+
+  .errorContainer
+    margin: 0 auto
+    text-align: center
+    display: flex
+    flex-direction: column
+    width: 260px
+    padding: 15px
+
+    .message
+      color: red
+      font-size: 18px
+
+    .try
+      color: #333
+      font-size: 18px
+
+  .filterContainer
+    height: fit-content
+    margin-right: 25px
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: flex-start
+    box-shadow: 0 5px 10px 3px rgba(0, 0, 0, 0.1)
+    @media(max-width: $break-point)
+      margin: 0
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+      box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.1)
+
+    .headerFilter
+      display: inline-block
+      align-self: stretch
+      padding: 25px
+      font-size: 22px
+      font-weight: 600
+      background-color: #f3f3f3
+      color: #333
+      @media(max-width: $break-point)
+        padding: 10px
+        text-align: center
+

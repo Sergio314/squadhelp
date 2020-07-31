@@ -1,0 +1,280 @@
+$accent-color: #28D2D1
+$orange-color: #f18762
+$main-color: #455A89
+
+@mixin flex($justify, $align)
+  display: flex
+  justify-content: $justify
+  align-items: $align
+
+html
+  scroll-behavior: smooth
+
+body
+
+  color: #333
+
+  h1, h2, h3, h4, h5, h6
+    color: #515b5f
+
+.wrapper
+  max-width: 1200px
+  margin: 0 auto
+  font-family: 'Raleway', sans-serif
+  font-size: 18px
+
+.howSection
+  @include flex(center, normal)
+  flex-wrap: wrap
+  margin-top: 60px
+  @media screen and (max-width: 768px)
+    margin: 30px 0
+    flex-direction: column
+    @include flex(center, center)
+
+.main
+  max-width: 600px
+  min-width: 300px
+  flex: 1
+
+  h2
+    margin-top: 0
+    font-size: 36px
+    @media screen and (max-width: 768px)
+      min-width: 320px
+      margin: 10px 0
+      text-align: center
+
+  p
+    font-size: 16px
+    line-height: 25px
+    @media screen and (max-width: 768px)
+      text-align: center
+      padding: 0 10px
+
+.video
+  margin: 0 20px
+  @media screen and (max-width: 576px)
+    margin: 10px 0
+  iframe
+    width: 555px
+    height: 312px
+    @media screen and (max-width: 576px)
+      width: 320px
+      height: 180px
+
+.stepsHeader
+  @include flex(center, normal)
+  margin-top: 60px
+  font-size: 36px
+
+.stepHover
+  background-color: $accent-color
+  cursor: pointer
+  color: white
+
+.stepContainer
+  @include flex(center, normal)
+  list-style-type: none
+  padding: 0
+  flex-wrap: wrap
+  margin-top: 60px
+
+  li:first-child > div
+    @extend .stepHover
+
+.step
+  max-width: 165px
+  margin: 0 10px
+  text-align: center
+
+  div
+    @include flex(center, center)
+    margin: 0 auto
+    font-size: 30px
+    font-weight: 700
+    background-color: #ebebeb
+    border-radius: 50%
+    height: 90px
+    width: 90px
+
+    &:hover
+      @extend .stepHover
+
+  h4
+    font-size: 16px
+
+  p
+    font-size: 14px
+    font-weight: 300
+
+
+.contestLinkContainer
+  @include flex(center, normal)
+  background-color: $accent-color
+  margin-top: 30px
+  padding: 30px 0
+
+  a
+    padding: 18px 0
+    border: 2px solid white
+    border-radius: 5px
+    width: 240px
+    font-weight: 700
+    text-transform: uppercase
+    text-align: center
+    text-decoration: none
+    color: white
+    font-size: 20px
+
+    &:hover
+      background-color: white
+      color: $accent-color
+
+.faqContainer
+  margin: 60px 0
+
+  .faqList
+    list-style-type: none
+    padding: 0
+    font-size: 16px
+
+    > li:nth-child(even)
+      background-color: #FAFAFA
+
+    > li
+      margin: 0
+      padding: 1em
+
+    a
+      color: $accent-color
+
+      &:hover
+        text-decoration: none
+
+    ul
+      margin-top: 15px
+      list-style-type: '- '
+      font-size: 14px
+      padding: 0 25px
+
+    p
+      margin: 0
+      padding: 1em 0
+
+    h4
+      margin: 0
+      padding: 1em 0
+
+
+.faqTitle
+  display: flex
+  align-items: center
+  border-bottom: 1px solid #e1e1e1
+  padding-bottom: 30px
+
+  div
+    @include flex(center, center)
+    margin: 0 10px
+    height: 50px
+    width: 50px
+    border-radius: 50%
+    border: 2px solid $accent-color
+    color: $accent-color
+    font-size: 36px
+
+  h4
+    font-size: 30px
+    margin: 0
+
+.getInTouch
+  color: white
+  width: 100%
+  background-color: $main-color
+  min-height: 200px
+  @include flex(center, center)
+  @media screen and (max-width: 768px)
+    flex-direction: column
+
+.envelopeIcon
+  background-color: white
+  border-radius: 50%
+  min-height: 100px
+  min-width: 100px
+  margin-right: 40px
+  color: $main-color
+  font-size: 40px
+  @include flex(center, center)
+  @media screen and (max-width: 768px)
+    display: none
+
+.touchInfo
+  max-width: 650px
+  @media screen and (max-width: 768px)
+    margin: 0 15px
+    text-align: center
+
+  h1
+    color: white
+
+  p
+    text-decoration: none
+    font-size: 20px
+    font-weight: 300
+    color: white
+
+    a
+      color: $orange-color
+      text-decoration: none
+
+.touchButton
+  margin-left: 40px
+  border-radius: 5px
+  border: 2px solid white
+  padding: 20px 30px
+  text-align: center
+  white-space: nowrap
+
+  a
+    text-decoration: none
+    color: white
+    text-transform: uppercase
+    font-weight: 700
+
+  &:hover
+    background-color: white
+
+    a
+      color: $accent-color
+
+  @media screen and (max-width: 768px)
+    margin: 20px 0
+
+.scrollUp
+  color: white
+  cursor: pointer
+  position: fixed
+  right: 10px
+  bottom: 100px
+  background-color: $orange-color
+  border-radius: 50%
+  height: 33px
+  width: 33px
+  opacity: 0
+  transition: all ease-in-out 0.33s
+  @include flex(center, center)
+
+  i
+    font-size: 12px
+    height: 16px
+    width: 16px
+    background-color: white
+    border-radius: 50%
+    color: $orange-color
+    @include flex(center, center)
+
+  &:hover
+    opacity: 1
+
+.visible
+  opacity: 0.4

@@ -1,0 +1,108 @@
+$main-color: #4e618d
+
+.moderatorOfferBox
+  max-width: 100%
+  width: 100%
+  overflow: hidden
+  min-height: 150px
+  display: flex
+  margin: 1em auto
+  padding: 0 1em
+  justify-content: center
+  align-items: center
+  box-sizing: border-box
+  border-radius: 10px
+  background-color: #ebebeb7a
+  box-shadow: 0px 0px 4px -2px rgba(0, 0, 0, 0.6)
+  @media (max-width: 768px)
+    max-width: 450px
+    flex-direction: column
+
+.mainContainer
+  flex: 1
+  text-align: center
+  @media (max-width: 768px)
+    margin-top: 10px
+    padding: 5px
+
+.infoContainer
+  box-sizing: border-box
+  display: flex
+  flex-direction: column
+  color: $main-color
+  line-height: 1.5
+  font-weight: 500
+  @media (max-width: 768px)
+    text-align: center
+    flex-direction: row
+
+  p
+    margin: 0
+    @media (max-width: 768px)
+      margin: 0 10px
+      display: flex
+      flex-direction: column
+      align-items: center
+
+    span
+      color: black
+
+      &:before
+        content: ' '
+
+
+.textContainer
+  @extend .mainContainer
+  color: black
+
+
+.fileContainer
+  @extend .mainContainer
+  display: flex
+  align-items: center
+
+
+.logo
+  margin: 0 auto
+  cursor: pointer
+  width: auto
+  height: 120px
+  @media (max-width: 768px)
+    height: 180px
+
+.buttonContainer
+  color: white
+  box-sizing: border-box
+  display: flex
+  justify-content: space-between
+  flex-direction: column
+  @media (max-width: 768px)
+    flex-direction: row
+    padding: 10px 5px
+    justify-content: space-around
+    width: 100%
+  @media (max-width: 425px)
+    padding: 10px 0
+    justify-content: space-between
+
+.button
+  width: 80px
+  text-align: center
+  border-radius: 8px
+  padding: 10px 20px
+  background-color: $main-color
+  cursor: pointer
+
+  & + .button
+    margin-top: 25px
+    @media (max-width: 768px)
+      margin: 0
+
+
+.ban
+  &:hover
+    background-color: red
+
+.approve
+  &:hover
+    background-color: green
